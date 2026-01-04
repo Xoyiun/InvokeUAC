@@ -61,3 +61,4 @@ To ensure the application runs correctly, please choose the version suitable for
 
 ## Operational Safety Notice
 This tool involves write and delete operations within the `HKEY_CURRENT_USER` registry hive. Before performing "Batch Delete" or "Add Entry," ensure the target operations align with your intentions. This tool is intended for system maintenance and technical research only.
+# In case of any discrepancies or ambiguities, the Traditional Chinese version shall prevail
