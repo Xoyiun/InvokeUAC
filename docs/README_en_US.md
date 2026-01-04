@@ -1,28 +1,63 @@
-**[中文繁體](README_zh_TW.md) | [中文简体](README_zh_CN.md) | [English(US)](README_en_US.md)**
+**[中文繁體](README.md) | [中文简体](README_zh_CN.md) | [English(US)](README_en_US.md)**
+
 # InvokeUAC
-Modify registry values to allow specific files to run without requiring User Account Control (UAC) permissions.
+By adding registry values, specific files can be executed without requiring User Account Control (UAC) authorization.
 
-## Features
-- **Multilingual Support**: Switch languages via the top-left menu.
-- **Registry Management**: Add or remove specific application UAC records.
-- **Quick Actions**: Use buttons to efficiently manage registry settings.
+## Core Features
 
-## Usage
+### 1. Modern List Management
+* **Automatic Resource Resolution**: Automatically parses and extracts icons from executable paths, providing intuitive visual identification for quick item recognition.
+* **Responsive Selection Logic**: Refactored selection mechanisms ensure smooth operational feedback even with large datasets.
+* **High-Performance Architecture**: Built on .NET 10.0 to ensure maximum efficiency when handling low-level system registry operations.
 
-### Language Settings
-- Click the **top-left "Menu"** to select a language.
+### 2. Advanced Batch Operations
+* **Multi-Item Selection**: Supports standard Extended Selection mode via mouse dragging, or using Shift and Ctrl keys to select multiple targets simultaneously.
+* **Synchronized Processing**: Capability to perform synchronized deletions or file location retrievals for multiple registry keys.
 
-### Refresh Records
-- Click the **top-right "Refresh" button** to update the current registry records.
+---
 
-### Add Application to Registry
-- Click the **bottom-left "Add" button**.
-- Select the target application, and it will be automatically added to the registry.
+## Functional Button Guide
 
-### Remove UAC Exception for an Application
-- Select the target application.
-- Click the **bottom-right "Delete" button**, and its UAC record will be removed.
+### 1. Add Entry
+* **Purpose**: Manually create new UAC bypass registry entries.
+* **Usage**: Click the "Add" button and select an `.exe` file or enter a specific command path in the dialog. Upon confirmation, the program will create corresponding values in the targeted registry path.
 
-### Open Application Location
-- Select the target application.
-- Click the **"Location" button** to open the folder containing the application in File Explorer.
+### 2. Batch Delete
+* **Purpose**: Remove bypass configurations for selected items from the system registry.
+* **Usage**: Select one or more items from the list and click "Delete." The program invokes registry APIs to execute the deletion and simultaneously removes them from the UI list.
+
+### 3. List Info & View
+* **Purpose**: View detailed paths and icon info of selected items, and locate physical files.
+* **Usage**:
+    * **Content Preview**: Hover over an item to display its full path via ToolTip.
+    * **File Location**: Select an item and click "Location." The program invokes File Explorer to open the directory and highlight the physical file.
+
+### 4. Language Switch (Lang)
+* **Purpose**: Change the UI display language.
+* **Usage**: Click the language toggle button. The program dynamically remaps UI strings from JSON language files in real-time (Runtime), allowing language changes without a restart.
+
+### 5. Refresh (Reflash)
+* **Purpose**: Rescan the registry and synchronize the latest data state.
+* **Usage**: Click the "Refresh" button. The program re-traverses the target registry paths and reloads data to ensure the UI perfectly matches the actual system state.
+
+---
+
+## Technical Specifications
+* **Platform**: Windows x64
+* **Target Framework**: .NET 10.0
+* **User Interface**: WPF (Windows Presentation Foundation)
+
+## Deployment & Downloads
+
+To ensure the application runs correctly, please choose the version suitable for your environment:
+
+### Self-contained (Independent) - Recommended
+* **Target Audience**: General users or systems where the .NET 10 environment status is unknown.
+* **Description**: Deployed as a Self-contained package including all necessary .NET 10 components. Larger file size but offers the best compatibility.
+
+### Standard (Framework-dependent)
+* **Target Audience**: Users who have manually installed the .NET 10 Runtime.
+* **Description**: Very small file size, but depends on an existing .NET environment. It will fail to launch if the environment is missing or mismatched.
+
+## Operational Safety Notice
+This tool involves write and delete operations within the `HKEY_CURRENT_USER` registry hive. Before performing "Batch Delete" or "Add Entry," ensure the target operations align with your intentions. This tool is intended for system maintenance and technical research only.
