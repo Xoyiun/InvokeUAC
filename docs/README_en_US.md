@@ -15,6 +15,35 @@ By adding the `RunAsInvoker` compatibility layer to the registry, SideUAC forces
 
 ---
 
+## 效果對比展示
+
+<table border="0">
+  <tr>
+    <td align="center"><b>Without FlickUAC</b></td>
+    <td align="center"><b>With FlickUAC</b></td>
+  </tr>
+  <tr>
+    <td>
+       <p align="center">
+       <img src="https://github.com/user-attachments/assets/25c42eab-ec19-4599-83a0-df780a7c9d58" width="30%" title="Before starting" />
+       <img src="https://github.com/user-attachments/assets/5e316e8f-d6ae-456e-979a-48a35a327794" width="30%" title="UAC" />
+       <img src="https://github.com/user-attachments/assets/f91a81d2-4828-407a-bf8c-7bf7c34e7fd5" width="30%" title="Before starting" />
+</p></td>
+    <td><p align="center">
+       <img src="https://github.com/user-attachments/assets/25c42eab-ec19-4599-83a0-df780a7c9d58" width="42%" title="Before starting" />
+       <img src="https://github.com/user-attachments/assets/f91a81d2-4828-407a-bf8c-7bf7c34e7fd5" width="42%" title="Before starting" />
+</p></td>
+  </tr>
+  <tr>
+    <td>System triggers UAC block</td>
+    <td>App starts directly without interference</td>
+  </tr>
+</table>
+
+> Effectiveness depends on the application's actual privilege requests.
+
+---
+
 ## Functional Button Guide
 
 ### 1. Add Entry
