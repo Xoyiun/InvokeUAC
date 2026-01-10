@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Resource\InvokeUAC.ico" />
+    <Content Include="Resource\FlickUAC.ico" />
   </ItemGroup>
 
   <ItemGroup>

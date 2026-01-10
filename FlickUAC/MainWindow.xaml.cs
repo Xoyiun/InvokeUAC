@@ -11,7 +11,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace InvokeUAC_Redesigned
+namespace FlickUAC
 {
     public partial class MainWindow : Window
     {
@@ -74,7 +74,6 @@ namespace InvokeUAC_Redesigned
                         }
                     }
                 }
-                //ItemList.ItemsSource = null;
                 ItemList.ItemsSource = DisplayItems;
                 ItemList.UnselectAll();
             }
