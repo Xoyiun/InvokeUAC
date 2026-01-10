@@ -1,5 +1,5 @@
 **[中文繁體](README_zh_TW.md) | [中文简体](README_zh_CN.md) | [English(US)](README_en_US.md)**
-# InvokeUAC
+# SideUAC
 通过在注册表中加入 RunAsInvoker 兼容性层级，强制让特定文件以呼叫者权限执行，从而避开用户帐户控制 UAC (User Account Control) 的权限提升请求。
 
 ## 核心功能
