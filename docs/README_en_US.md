@@ -1,6 +1,6 @@
 **[中文繁體](README_zh_TW.md) | [中文简体](README_zh_CN.md) | [English(US)](README_en_US.md)**
-# SideUAC
-By adding the `RunAsInvoker` compatibility layer to the registry, SideUAC forces specific files to execute with the caller's privileges, effectively bypassing User Account Control (UAC) elevation prompts.
+# FlickUAC
+By adding the `RunAsInvoker` compatibility layer to the registry, FlickUAC forces specific files to execute with the caller's privileges, effectively bypassing User Account Control (UAC) elevation prompts.
 
 ## Core Features
 
