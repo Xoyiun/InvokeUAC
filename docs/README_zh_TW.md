@@ -1,5 +1,5 @@
 **[中文繁體](README_zh_TW.md) | [中文简体](README_zh_CN.md) | [English(US)](README_en_US.md)**
-# SideUAC
+# FlickUAC
 透過在註冊表中加入 RunAsInvoker 相容性層級，強制讓特定文件以呼叫者權限執行，從而避開使用者帳戶控制 UAC (User Account Control) 的權限提升請求。
 
 ## 核心功能
@@ -12,6 +12,35 @@
 ### 2. 進階批量操作
 * **多重項目選取**：支援標準的 Extended Selection 模式，可透過滑鼠拖曳、Shift 或 Ctrl 鍵同時選取多個目標項目。
 * **同步處理能力**：支援針對多組註冊表鍵值進行同步刪除或檔案位置檢索。
+
+---
+
+## 效果對比展示
+
+<table border="0">
+  <tr>
+    <td align="center"><b>未使用</b></td>
+    <td align="center"><b>使用 FlickUAC 後</b></td>
+  </tr>
+  <tr>
+    <td>
+       <p align="center">
+       <img src="https://github.com/user-attachments/assets/25c42eab-ec19-4599-83a0-df780a7c9d58" width="30%" title="開啟應用前" />
+       <img src="https://github.com/user-attachments/assets/5e316e8f-d6ae-456e-979a-48a35a327794" width="30%" title="UAC" />
+       <img src="https://github.com/user-attachments/assets/f91a81d2-4828-407a-bf8c-7bf7c34e7fd5" width="30%" title="開啟應用後" />
+</p></td>
+    <td><p align="center">
+       <img src="https://github.com/user-attachments/assets/25c42eab-ec19-4599-83a0-df780a7c9d58" width="42%" title="開啟應用前" />
+       <img src="https://github.com/user-attachments/assets/f91a81d2-4828-407a-bf8c-7bf7c34e7fd5" width="42%" title="開啟應用後" />
+</p></td>
+  </tr>
+  <tr>
+    <td>系統跳出 UAC 阻擋</td>
+    <td>程式直接啟動無干擾</td>
+  </tr>
+</table>
+
+> 效果須依應用實際請求權限而定
 
 ---
 
@@ -59,6 +88,6 @@
 * **說明**：檔案體積極小，依賴系統已存在的 .NET 環境，若環境版本不符則無法啟動。
 
 ## 操作安全性提示
-本工具涉及對系統註冊表 `HKEY_CURRENT_USER` 路徑的寫入與刪除操作。在執行「批量刪除」或「加入項目」前，請務必確認操作目標符合您的預期。本工具僅供系統維護與技術研究使用。
+本工具涉及對系統註冊表 `HKEY_CURRENT_USER` 路徑的寫入與刪除操作。在執行「批量刪除」或「加入項目」前，請務必確認操作目標符合您的預期。
 
 # 一切歧異以繁體中文為準
