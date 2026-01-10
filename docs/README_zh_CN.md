@@ -1,5 +1,5 @@
 **[中文繁體](README_zh_TW.md) | [中文简体](README_zh_CN.md) | [English(US)](README_en_US.md)**
-# SideUAC
+# FlickUAC
 通过在注册表中加入 RunAsInvoker 兼容性层级，强制让特定文件以呼叫者权限执行，从而避开用户帐户控制 UAC (User Account Control) 的权限提升请求。
 
 ## 核心功能
@@ -12,6 +12,35 @@
 ### 2. 进阶批量操作
 * **多重项目选取**：支持标准的 Extended Selection 模式，可通过鼠标拖拽、Shift 或 Ctrl 键同时选取多个目标项目。
 * **同步处理能力**：支持针对多组注册表键值进行同步删除或文件位置检索。
+
+---
+
+## 效果对比展示
+
+<table border="0">
+  <tr>
+    <td align="center"><b>未使用</b></td>
+    <td align="center"><b>使用 FlickUAC 后</b></td>
+  </tr>
+  <tr>
+    <td>
+       <p align="center">
+       <img src="https://github.com/user-attachments/assets/25c42eab-ec19-4599-83a0-df780a7c9d58" width="30%" title="开启应用前" />
+       <img src="https://github.com/user-attachments/assets/5e316e8f-d6ae-456e-979a-48a35a327794" width="30%" title="UAC" />
+       <img src="https://github.com/user-attachments/assets/f91a81d2-4828-407a-bf8c-7bf7c34e7fd5" width="30%" title="开启应用后" />
+</p></td>
+    <td><p align="center">
+       <img src="https://github.com/user-attachments/assets/25c42eab-ec19-4599-83a0-df780a7c9d58" width="42%" title="开启应用前" />
+       <img src="https://github.com/user-attachments/assets/f91a81d2-4828-407a-bf8c-7bf7c34e7fd5" width="42%" title="开启应用后" />
+</p></td>
+  </tr>
+  <tr>
+    <td>系统跳出 UAC 阻挡</td>
+    <td>程序直接启动无干扰</td>
+  </tr>
+</table>
+
+> 效果须依应用实际请求权限而定
 
 ---
 
@@ -28,8 +57,8 @@
 ### 3. 批量查看详细内容
 * **作用**：检视选定项目的详细路径、图标信息以及定位实体文件。
 * **用法**：
-    * **内容预览**：鼠标停留在项目上会显示完整路径。
-    * **文件定位**：选取项目后点击“位置”，程序将调用文件资源管理器，自动打开文件夹并选中该实体文件。
+    * **內容預覽**：鼠标停留在项目上会显示完整路径。
+    * **檔案定位**：选取项目后点击“位置”，程序将调用文件资源管理器，自动打开文件夹并选中该实体文件。
 
 ### 4. 语言切换
 * **作用**：切换界面显示语言。
